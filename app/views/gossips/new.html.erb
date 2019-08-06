@@ -1,0 +1,19 @@
+<%= form_tag(gossips_path, method: "post") do %>
+    <%= label_tag( "Title") %>
+    <%= text_field_tag(:title) %>
+    <%= text_area_tag(:content, "Tape ton gossip ici", size: "24x6") %>
+
+    <%= submit_tag("Validates") %>
+<% end %>
+
+<% if @new_gossip.errors.any? %>
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+  <p>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
+  <ul>
+    <% @new_gossip.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  </div>
+<% end %>

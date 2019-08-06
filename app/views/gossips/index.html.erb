@@ -1,0 +1,6 @@
+<h1> Welcome to the new updated homepage!</h1>
+<%= link_to "Balance ton gossip", new_gossip_path%></p>
+<p> <% @gossips.each do |n| %>
+<%= n.user.first_name %> <br>
+<%= link_to "#{n.title}", gossip_path(n.id)%></p>
+<% end %>
