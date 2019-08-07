@@ -1,6 +1,6 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <h1 class="display-4">La ville chaude</h1>
-      <p class="lead">Prends la température</p>
+      <p class="lead">Prends la température de :</p>
       <h3><%= @city.name%></h3>
     </div>
 
@@ -12,10 +12,10 @@
           <div class="card-body"
             <ul class="list-unstyled mt-3 mb-4"
               <% @city.users.each do |i| %>
-              <li><%= i.first_name%> <%= i.last_name%> </li>
+              <p><%= i.first_name%> <%= i.last_name%> </p>
               <% i.gossips.each do |gossip| %>
-              <li><%= gossip.title%></li>
-              <li><%= gossip.content%> </li>
+              <p><%= gossip.title%></p>
+              <p><%= gossip.content%> </p>
               <% end %>
               <% end %>
             </ul>

@@ -15,7 +15,7 @@
               <li><%= @user.description %> </li>
               <li><%= @user.email %> </li>
               <li><%= @user.age %> </li>
-              <li><%= @user.city.name %> </li>
+              <li><%= link_to "#{@user.city.name}", city_path(@user.city.id) %></li>
             </ul>
           </div>
         </div>
