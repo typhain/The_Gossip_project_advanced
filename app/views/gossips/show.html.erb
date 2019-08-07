@@ -14,7 +14,8 @@
               <li class="card-text d-flex w-100 justify-content-center"><%= link_to "#{@gossip.user.first_name}", user_path(@gossip.user.id) %></li>
               <li class="card-text d-flex w-100 justify-content-center"><%= @gossip.title %> </li>
               <li class="card-text d-flex w-100 justify-content-center"><%= @gossip.content %> </li>
-              <li class="card-text d-flex w-100 justify-content-center"><%= @gossip.user.city.name %> </li>
+              <li class="card-text d-flex w-100 justify-content-center"><%= link_to "#{@gossip.user.city.name}", city_path(@gossip.user.city.id) %> </li>
+              
             </ul>
           </div>
         </div>

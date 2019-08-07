@@ -3,7 +3,7 @@ class CitiesController < ApplicationController
   end
 
   def show
-    @all_city = City.all
+    
     @city = City.find(params[:id])
   end
 end
