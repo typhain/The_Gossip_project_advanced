@@ -1,9 +1,12 @@
 <%= form_tag(gossips_path, method: "post") do %>
+  <div class="form-group">
     <%= label_tag( "Title") %>
-    <%= text_field_tag(:title) %>
-    <%= text_area_tag(:content, "Tape ton gossip ici", size: "24x6") %>
-
+    <%= text_field_tag(:title)%>
+    </div>
+    <%= text_area_tag(:content, "Tape ton gossip ici", size: "24x6")%>
+  <div class="form-group">
     <%= submit_tag("Validates") %>
+  </div>
 <% end %>
 
 <% if @new_gossip.errors.any? %>
