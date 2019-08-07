@@ -1,0 +1,18 @@
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Edite ton gossip</h1>
+      <p class="lead">Fais toi bien plez</p>
+    </div>
+
+<div class="container d-flex w-100 justify-content-center"
+<%= form_for @gossip do |gossip_form| %>
+    <div class="form-group">
+    <label> Titre du potin </label><br>
+    <%= gossip_form.text_field :title, class:'form_control' %>
+    <div class="form-group">
+    <label> Contenu du potin </label><br>
+    <%= gossip_form.text_area :content, class:'form_control',  size: "50x10"%>
+    <div class="form-group">
+    <%= submit_tag("Modifier") %>
+
+    <% end %>
+ 
