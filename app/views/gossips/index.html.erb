@@ -1,8 +1,31 @@
-<div class="jumbotron">
-        <div class="container">
-          <%= link_to "Balance ton gossip", new_gossip_path%></p>
-          <p> <% @gossips.each do |n| %>
-          <%= n.user.first_name %> <br>
-          <%= link_to "#{n.title}", gossip_path(n.id)%></p>
-          <% end %>
-      </div>
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">The Gossip Project</h1>
+      <p class="lead">Toutes les plus belles perfidies du web</p>
+    </div>
+
+<div class="row justify-content-center">
+ <%= link_to "Balance ta perfidie", new_gossip_path, :class=>"btn btn-danger btn-lg"%>
+</div> <br><br>
+
+  <div class="container">
+    <div class="row">
+      <% @gossips.each do |n| %>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex w-100 justify-content-center">
+                    <h5 class="mb-1"><%= n.user.first_name %></h5>
+                    <small></small>
+                  </div>
+                  <p class="card-text d-flex w-100 justify-content-center"><%= n.title %></p>
+                  <a <%= link_to "View", gossip_path(n.id), :class=>"card-text d-flex w-100 justify-content-center"%> </a>
+                </div>
+              </div>
+            </div>
+          </div><br>
+        </div>
+      <% end %>
+    </div>
+  </div>
