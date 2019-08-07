@@ -21,6 +21,9 @@
                   </div>
                   <p class="card-text d-flex w-100 justify-content-center"><%= n.title %></p>
                   <a <%= link_to "View", gossip_path(n.id), :class=>"card-text d-flex w-100 justify-content-center"%> </a>
+                  <div class="d-flex w-100 justify-content-center">
+                  <a href="<%= root_path %>" class="btn btn-danger" data-method="delete">Supprimer</a>
+                  </div>
                 </div>
               </div>
             </div>

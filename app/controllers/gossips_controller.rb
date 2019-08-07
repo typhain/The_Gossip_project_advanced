@@ -5,7 +5,7 @@ class GossipsController < ApplicationController
 
   def show
     @gossip = Gossip.find(params[:id])
-    
+
   end
 
   def new
@@ -30,7 +30,8 @@ class GossipsController < ApplicationController
 
   def update
     @gossip = Gossip.find(params[:id])
-    if @gossip.update(tes_params)
+    gossip_params = params.require(:gossip).permit(:title, :content)
+    if @gossip.update(gossip_params)
       redirect_to @gossip
     else
       render :edit
@@ -39,5 +40,7 @@ class GossipsController < ApplicationController
   end
 
   def destroy
+    @gossip = Gossip.find(params[:id])
+    @gossip.destroy
   end
 end
