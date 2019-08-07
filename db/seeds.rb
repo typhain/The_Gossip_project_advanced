@@ -7,14 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'pry'
 require 'faker'
-City.destroy_all
-User.destroy_all
-Gossip.destroy_all
-JoinTableGossipTag.destroy_all
-Tag.destroy_all
-PrivateMessage.destroy_all
-JoinTableMessageRecipient.destroy_all
-Comment.destroy_all
+# City.destroy_all
+# User.destroy_all
+# Gossip.destroy_all
+# JoinTableGossipTag.destroy_all
+# Tag.destroy_all
+# PrivateMessage.destroy_all
+# JoinTableMessageRecipient.destroy_all
+# Comment.destroy_all
 
 10.times do
   City.create(name: Faker::Address.city, zip_code: Faker::Address.zip_code)
