@@ -1,0 +1,23 @@
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">La ville chaude</h1>
+      <p class="lead">Prends la température</p>
+      <h3><%= @city.name%></h3>
+    </div>
+
+<div class="container"
+<div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal d-flex w-100 justify-content-center">Tous les détails</h4>
+          </div>
+          <div class="card-body"
+            <ul class="list-unstyled mt-3 mb-4"
+              <% @city.users.each do |i| %>
+              <li><%= i.first_name%> <%= i.last_name%> </li>
+              <% i.gossips.each do |gossip| %>
+              <li><%= gossip.title%></li>
+              <li><%= gossip.content%> </li>
+              <% end %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
