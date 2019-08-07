@@ -15,7 +15,7 @@
               <p><%= i.first_name%> <%= i.last_name%> </p>
               <% i.gossips.each do |gossip| %>
               <p><%= gossip.title%></p>
-              <p><%= gossip.content%> </p>
+              <p><em><%= gossip.content%><em></p>
               <% end %>
               <% end %>
             </ul>

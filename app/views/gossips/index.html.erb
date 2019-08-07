@@ -4,7 +4,7 @@
     </div>
 
 <div class="row justify-content-center">
- <%= link_to "Balance ta perfidie", new_gossip_path, :class=>"btn btn-danger btn-lg"%>
+ <%= link_to "Balance ta perfidie", new_gossip_path, :class=>"btn btn-primary btn-lg"%>
 </div> <br><br>
 
   <div class="container">
@@ -22,7 +22,6 @@
                   <p class="card-text d-flex w-100 justify-content-center"><%= n.title %></p>
                   <a <%= link_to "View", gossip_path(n.id), :class=>"card-text d-flex w-100 justify-content-center"%> </a>
                   <div class="d-flex w-100 justify-content-center">
-                  <a href="<%= root_path %>" class="btn btn-danger" data-method="delete">Supprimer</a>
                   </div>
                 </div>
               </div>

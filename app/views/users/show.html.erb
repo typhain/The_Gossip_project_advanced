@@ -10,12 +10,12 @@
           </div>
           <div class="card-body"
             <ul class="list-unstyled mt-3 mb-4">
-              <li><%= @user.first_name %></li>
-              <li><%= @user.last_name %> </li>
-              <li><%= @user.description %> </li>
-              <li><%= @user.email %> </li>
-              <li><%= @user.age %> </li>
-              <li><%= link_to "#{@user.city.name}", city_path(@user.city.id) %></li>
+            <%= @user.first_name %>
+            <%= @user.last_name %><br><br>
+            <p><em><%= @user.description %></em></p><br>
+            <%= @user.email %><br><br>
+            <%= @user.age %><br><br>
+            <%= link_to "#{@user.city.name}", city_path(@user.city.id) %>
             </ul>
           </div>
         </div>
